@@ -1,23 +1,23 @@
 @font-face {
-  font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-family: "primary-font";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf"), url("../../assets/fonts/AvenirNextLTPro.ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-family: "primary-font";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf"), url("../../assets/fonts/AvenirNextLTProDemi.ttf");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-family: "primary-font";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf"), url("../../assets/fonts/AvenirNextLTProBold.ttf");
   font-weight: 700;
   font-style: normal;
 }
 body {
-  font-family: "Avenir Next";
+  font-family: "primary-font";
   margin: 0px;
   padding: 0px;
 }
@@ -38,27 +38,35 @@ body {
   list-style: none;
   background-color: #323232;
   margin: 0px;
-  padding: 0px 0px 16px 0px;
+  padding: 0px;
+}
+.nav__item-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 32px;
+}
+.nav__item-wrapper--active {
+  border-bottom: 3px solid #FFFFFF;
+}
+.nav__item-wrapper:hover {
+  border-bottom: 3px solid #FFFFFF;
 }
 .nav__list-item {
-  position: relative;
   color: #AFAFAF;
   text-decoration: none;
-  width: 50%;
+  width: 100%;
   font-weight: 400;
 }
 .nav__list-item--active {
   color: #FFFFFF;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 100%;
+}
+.nav__item-link {
+  text-decoration: none;
+  color: #AFAFAF;
 }
 
 .hero-section {
-  display: flex;
-  align-items: center;
-  color: white;
-  position: relative;
   background-image: url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -69,6 +77,16 @@ body {
 .hero-section__header {
   padding-left: 16px;
   font-weight: 700;
+}
+.hero-section__overlay {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 32px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
 }
 
 .about-section {
@@ -86,11 +104,28 @@ body {
 }
 .about-section__p {
   font-size: 13px;
+  line-height: 18px;
+  color: #323232;
 }
 .about-section__p--bold {
   font-weight: 600;
 }
 .about-section__sub-header {
   font-size: 14px;
+  line-height: 22px;
   font-weight: 600;
+}
+
+.galery-section {
+  background-color: #FAFAFA;
+  padding: 0px 16px 0px 16px;
+}
+.galery-section__header {
+  font-size: 24px;
+  line-height: 32px;
+  color: #323232;
+}
+.galery-section__img {
+  width: 100%;
+  padding-bottom: 16px;
 }/*# sourceMappingURL=bio.css.map */
