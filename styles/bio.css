@@ -82,8 +82,8 @@ body {
   display: flex;
   align-items: center;
   color: #FFFFFF;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
@@ -103,17 +103,22 @@ body {
   width: 100%;
 }
 .about-section__p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
   color: #323232;
+  margin: 0px;
+  padding-top: 16px;
 }
 .about-section__p--bold {
   font-weight: 600;
 }
 .about-section__sub-header {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
+  margin: 0px;
+  padding-top: 24px;
 }
 
 .galery-section {
@@ -121,11 +126,68 @@ body {
   padding: 0px 16px 0px 16px;
 }
 .galery-section__header {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: #323232;
+  margin: 0px;
+  padding: 24px 0px 16px 0px;
 }
 .galery-section__img {
   width: 100%;
   padding-bottom: 16px;
+}
+
+.footer-section {
+  background-color: #323232;
+  padding: 0px 16px 0px 16px;
+}
+.footer-section__header-wrapper {
+  display: flex;
+}
+.footer-section__header {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0px;
+  padding: 24px 0px 16px 0px;
+}
+.footer-section__icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 9vw;
+}
+.footer-section__social-icon {
+  width: 30px;
+}
+.footer-section__social-icon--facebook {
+  width: 18px;
+}
+.footer-section__subheader {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  margin: 0px;
+  padding: 24px 0px 16px 0px;
+}
+.footer-section__text {
+  color: #FFFFFF;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin: 0px;
+  padding-bottom: 16px;
+}
+.footer-section__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+.footer-section__logo-wrapper {
+  padding: 40px 0px 16px 0px;
+}
+.footer-section__logo {
+  display: block;
 }/*# sourceMappingURL=bio.css.map */

@@ -1,6 +1,6 @@
-@use "./partials/variables" as *;
-@use "./partials/global";
-
+@use "./partials/variables.css" as *;
+@use "./partials/global.css" as *;
+@use "./partials/mixins.css" as *;
 
 .nav{
   &__logo-wrapper{
@@ -8,7 +8,12 @@
     justify-content: center;
     background-color: $primary-dark;
     padding: 24px 0px 16px 0px;
+    
   }
+  
+  // @include tablet {
+  //   background-color: red;
+  // }
   
   &__list{
     display: flex;
@@ -28,6 +33,9 @@
     }
     &:hover{
       border-bottom: 3px solid $primary-light;
+    }
+    @include tablet{
+      width: 10%;
     }
   }
   &__list-item{
@@ -61,8 +69,8 @@
       display: flex;
       align-items: center;
       color: $primary-light;
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 1.5rem;
+      line-height: 2rem;
       background-color: rgba(0,0,0,0.5);
       width: 100%;
       height: 100%;
@@ -82,17 +90,22 @@
     width: 100%;
   }
   &__p{
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-weight: 400;
     color: $primary-dark;
+    margin: 0px;
+    padding-top: 16px;
     &--bold{
       font-weight: 600;
     }
   }
   &__sub-header{
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 600;
+    margin: 0px;
+    padding-top: 24px;
   }
 }
 
@@ -100,12 +113,69 @@
   background-color: $secondary-light;
   padding: 0px 16px 0px 16px;
   &__header{
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     color: $primary-dark;
+    margin: 0px;
+    padding: 24px 0px 16px 0px;
   }
   &__img{
     width: 100%;
     padding-bottom: 16px;
+  }
+}
+
+.footer-section{
+  background-color: $primary-dark;
+  padding: 0px 16px 0px 16px;
+  &__header-wrapper{
+    display: flex;
+  }
+  &__header{
+    color: $primary-light;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0px;
+    padding: 24px 0px 16px 0px;
+  }
+  &__icon-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 9vw;
+  }
+  &__social-icon{
+    width: 30px;
+    &--facebook{
+      width: 18px;
+    }
+  }
+  &__subheader{
+    color: $primary-light;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    margin: 0px;
+    padding: 24px 0px 16px 0px;
+  }
+  &__text{
+    color: $primary-light;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    margin: 0px;
+    padding-bottom: 16px;
+  }
+  &__link{
+    text-decoration: none;
+    color: $primary-light;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+  &__logo-wrapper{
+    padding: 40px 0px 16px 0px;
+  }
+  &__logo{
+    display: block;
   }
 }

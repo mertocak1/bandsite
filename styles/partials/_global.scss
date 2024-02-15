@@ -1,3 +1,5 @@
+@use "./partials/variables" as *;
+
 @font-face {
   font-family: "primary-font";
   src: url('../../assets/fonts/AvenirNextLTPro-Regular.otf'),
@@ -33,3 +35,4 @@ body{
 * {
   box-sizing: border-box;
 }
+
