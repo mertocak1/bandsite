@@ -1,19 +1,24 @@
-@use "./partials/variables.css" as *;
-@use "./partials/global.css" as *;
-@use "./partials/mixins.css" as *;
+@use "partials/variables" as *;
+@use "partials/global" as *;
+@use "partials/mixins" as *;
 
-.nav{
+.nav-section{
+  background-color: $primary-dark;
+  @include tablet{
+    display: flex;
+    align-items: center;
+    gap: 10vw;
+    padding: 24px 24px 24px 24px;
+  }
   &__logo-wrapper{
     display: flex;
     justify-content: center;
     background-color: $primary-dark;
     padding: 24px 0px 16px 0px;
-    
+    @include tablet{
+      padding: 0px;
+    }
   }
-  
-  // @include tablet {
-  //   background-color: red;
-  // }
   
   &__list{
     display: flex;
@@ -22,21 +27,42 @@
     background-color: $primary-dark;
     margin: 0px;
     padding: 0px;
+    @include tablet {
+      height: 19px;
+      gap: 6vw;
+    }
   }
   &__item-wrapper{
     display: flex;
     justify-content: center;
     width: 50%;
     height: 32px;
+    @include tablet{
+      height: 0px;
+    }
     &--active{
       border-bottom: 3px solid $primary-light;
+      @include tablet{
+        border: none;
+        color: $primary-light;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 150%;
+      }
     }
     &:hover{
       border-bottom: 3px solid $primary-light;
+      @include tablet {
+        border: none;
+        color: $primary-light;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 150%;
+      }
     }
-    @include tablet{
-      width: 10%;
-    }
+      
+    
   }
   &__list-item{
     color: $primary-medium;
@@ -61,16 +87,24 @@
   background-size: cover;
   width: 100%;
   height: 200px;
+  @include tablet{
+    height: 500px;
+  }
     &__header{
       padding-left: 16px;
       font-weight: 700;
+      @include tablet{
+        padding-left: 24px;
+        font-size: $section-pageh-size-tablet;
+        line-height: $section-pageh-height-tablet;
+      }
     }
     &__overlay{
       display: flex;
       align-items: center;
       color: $primary-light;
-      font-size: 1.5rem;
-      line-height: 2rem;
+      font-size: $section-header-size-phone;
+      line-height: $section-header-height-phone;
       background-color: rgba(0,0,0,0.5);
       width: 100%;
       height: 100%;
@@ -78,20 +112,35 @@
 }
 
 .about-section{
+  padding: 24px 16px 16px 16px;
+  @include tablet{
+    padding: 60px 50px 30px 50px;
+  }
+
   &__header{
-    font-size: 1.5rem;
+    color: $primary-dark;
+    font-size: $section-header-size-phone;
+    line-height: $section-header-height-phone;
     font-weight: 700;
     padding: 0px;
     padding-bottom: 16px;
     margin: 0px;
+    @include tablet{
+      font-size: $section-header-size-tablet;
+      line-height: $section-header-height-tablet;
+      padding-bottom: 30px;
+    }
   }
-  padding: 24px 16px 16px 16px;
   &__img{
     width: 100%;
+    padding-bottom: 16px;
+    @include tablet{
+      padding: 0px 40px 24px 40px;
+    }
   }
   &__p{
-    font-size: 0.813rem;
-    line-height: 1.125rem;
+    font-size: $section-body-size-phone;
+    line-height: $section-body-height-phone;
     font-weight: 400;
     color: $primary-dark;
     margin: 0px;
@@ -99,29 +148,81 @@
     &--bold{
       font-weight: 600;
     }
+    @include tablet{
+      padding: 0px 40px 12px 40px;
+      font-size: $section-body-size-tablet;
+      line-height: $section-body-height-tablet;
+    }
   }
   &__sub-header{
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: $section-sheader-size-phone;
+    line-height: $section-sheader-height-phone;
     font-weight: 600;
     margin: 0px;
     padding-top: 24px;
+    @include tablet{
+      padding: 24px 40px 22px 40px;
+      font-size: $section-sheader-size-tablet;
+      line-height: $section-sheader-height-tablet;
+    }
+  }
+  &__article{
+    padding: 0px 16px 16px 16px;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4vw;
+      padding: 0px 75px 16px 75px;
+    }
+  }
+  &__article-p{
+    font-size: $section-body-size-phone;
+  line-height: $section-body-height-phone;
+  font-weight: 400;
+  color: $primary-dark;
+  margin: 0px;
+  padding-top: 0px;
+  @include tablet{
+    width: 45%;
+  }
   }
 }
 
 .galery-section{
   background-color: $secondary-light;
   padding: 0px 16px 0px 16px;
+  @include tablet{
+    padding: 0px 35px 0px 35px;
+    width: 100%;
+    height: 95vh;
+  }
   &__header{
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: $section-header-size-phone;
+    line-height: $section-header-height-phone;
     color: $primary-dark;
     margin: 0px;
     padding: 24px 0px 16px 0px;
+    @include tablet{
+      font-size: $section-header-size-tablet;
+      line-height: $section-header-height-tablet;
+      padding: 60px 35px 30px 25px;
+    }
+  }
+  &__content-wrapper{
+    @include tablet{
+      // display: flex;
+      // justify-content: center;
+    }
   }
   &__img{
     width: 100%;
     padding-bottom: 16px;
+    @include tablet{
+      // flex: 1;
+      width: 32%;
+      padding: 0px 10px 25px 25px;
+    }
   }
 }
 
@@ -133,8 +234,8 @@
   }
   &__header{
     color: $primary-light;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: $section-header-size-phone;
+    line-height: $section-header-height-phone;
     margin: 0px;
     padding: 24px 0px 16px 0px;
   }
@@ -151,16 +252,16 @@
   }
   &__subheader{
     color: $primary-light;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: $section-sheader-size-phone;
+    line-height: $section-sheader-height-phone;
     font-weight: 600;
     margin: 0px;
     padding: 24px 0px 16px 0px;
   }
   &__text{
     color: $primary-light;
-    font-size: 0.813rem;
-    line-height: 1.125rem;
+    font-size: $section-footer-size-phone;
+    line-height: $section-footer-height-phone;
     font-weight: 400;
     margin: 0px;
     padding-bottom: 16px;
@@ -168,8 +269,8 @@
   &__link{
     text-decoration: none;
     color: $primary-light;
-    font-size: 0.813rem;
-    line-height: 1.125rem;
+    font-size: $section-footer-size-phone;
+    line-height: $section-footer-height-phone;
     font-weight: 400;
   }
   &__logo-wrapper{

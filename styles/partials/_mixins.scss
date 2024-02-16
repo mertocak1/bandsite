@@ -1,7 +1,7 @@
-@use "./partials/variables.scss" as *;
+@use "variables.scss" as *;
 
-// @mixin tablet {
-//   @media (min-width: $breakpoint-tablet){
-//     @content;
-//   }
-// }
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-tablet){
+    @content;
+  }
+}

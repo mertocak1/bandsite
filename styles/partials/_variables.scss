@@ -8,5 +8,36 @@ $secondary-dark: #000000;
 $secondary-medium: #E1E1E1;
 $secondary-light: #FAFAFA;
 
+// Font Size {Phone}
+$section-pageh-size-phone: 1.5rem; //24px
+$section-header-size-phone: 1.5rem; //24px
+$section-sheader-size-phone: 0.875rem; //14px
+$section-body-size-phone: 0.813rem; //13px
+$section-footer-size-phone: 0.813rem; //13px
+// Line Height {Phone}
+
+$section-pageh-height-phone: 2rem; //32px
+$section-header-height-phone: 2rem; //32px
+$section-sheader-height-phone: 1.375rem; //22px
+$section-body-height-phone: 1.125rem; //18px
+$section-footer-height-phone: 1.125rem; //18px
+
+// Font Size {Tablet and Desktop}
+
+$section-pageh-size-tablet: 3.75rem; //60px
+$section-header-size-tablet: 2.25rem; //36px
+$section-sheader-size-tablet: 1.5rem; //24px
+$section-body-size-tablet: 0.875rem; //14px
+$section-footer-size-tablet: 0.813rem; //13px
+
+// Line Height {Tablet and Desktop}
+
+$section-pageh-height-tablet: 4.25rem; //68px
+$section-header-height-tablet: 2.75rem; //44px
+$section-sheader-height-tablet: 2rem; //32px
+$section-body-height-tablet: 1.375rem; //22px
+$section-footer-height-tablet: 1.125rem; //18px
+
+
 // Break Points
 $breakpoint-tablet: 768px;
