@@ -105,7 +105,8 @@
       color: $primary-light;
       font-size: $section-header-size-phone;
       line-height: $section-header-height-phone;
-      background-color: rgba(0,0,0,0.5);
+      background-color: $primary-dark;
+      opacity: 50%;
       width: 100%;
       height: 100%;
     }
@@ -133,7 +134,6 @@
   }
   &__img{
     width: 100%;
-    padding-bottom: 16px;
     @include tablet{
       padding: 0px 40px 24px 40px;
     }
@@ -167,7 +167,7 @@
     }
   }
   &__article{
-    padding: 0px 16px 16px 16px;
+    padding: 0px 16px 0px 16px;
     @include tablet {
       display: flex;
       align-items: center;
@@ -183,6 +183,7 @@
   color: $primary-dark;
   margin: 0px;
   padding-top: 0px;
+  padding-bottom: 16px;
   @include tablet{
     width: 45%;
   }
@@ -195,7 +196,6 @@
   @include tablet{
     padding: 0px 35px 0px 35px;
     width: 100%;
-    height: 95vh;
   }
   &__header{
     font-size: $section-header-size-phone;
@@ -206,7 +206,7 @@
     @include tablet{
       font-size: $section-header-size-tablet;
       line-height: $section-header-height-tablet;
-      padding: 60px 35px 30px 25px;
+      padding: 45px 15px 30px 15px;
     }
   }
   &__content-wrapper{
@@ -221,7 +221,7 @@
     @include tablet{
       // flex: 1;
       width: 32%;
-      padding: 0px 10px 25px 25px;
+      padding: 0px 0px 25px 15px;
     }
   }
 }
@@ -229,6 +229,31 @@
 .footer-section{
   background-color: $primary-dark;
   padding: 0px 16px 0px 16px;
+  @include tablet{
+    position: relative;
+    padding: 50px 50px 40px 50px;
+    // display: flex;
+  }
+  &__content-wrapper{
+    @include tablet{
+      display: flex;
+      align-items: center;
+      gap: 4vw;
+    }
+    &--info{
+      flex-direction: column;
+      width: 30%;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+  }
+  &__content-align{
+    @include tablet{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+  }
   &__header-wrapper{
     display: flex;
   }
@@ -238,17 +263,27 @@
     line-height: $section-header-height-phone;
     margin: 0px;
     padding: 24px 0px 16px 0px;
+    @include tablet{
+      font-size: $section-header-size-tablet;
+      line-height: $section-header-height-tablet;
+      padding: 0px;
+    }
   }
   &__icon-wrapper{
     display: flex;
     align-items: center;
     gap: 9vw;
+    @include tablet{
+      gap: 5vw;
+      height: 44px;
+    }
   }
   &__social-icon{
     width: 30px;
     &--facebook{
       width: 18px;
     }
+    
   }
   &__subheader{
     color: $primary-light;
@@ -257,6 +292,9 @@
     font-weight: 600;
     margin: 0px;
     padding: 24px 0px 16px 0px;
+    @include tablet{
+      padding-bottom: 0px;
+    }
   }
   &__text{
     color: $primary-light;
@@ -265,6 +303,10 @@
     font-weight: 400;
     margin: 0px;
     padding-bottom: 16px;
+    @include tablet{
+      padding: 0px;
+    }
+    
   }
   &__link{
     text-decoration: none;
@@ -275,8 +317,24 @@
   }
   &__logo-wrapper{
     padding: 40px 0px 16px 0px;
+    @include tablet {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
   }
   &__logo{
     display: block;
+  }
+  &__copyright{
+    color: $primary-light;
+    font-size: $section-footer-size-phone;
+    line-height: $section-footer-height-phone;
+    font-weight: 400;
+    margin: 0px;
+    padding-bottom: 16px;
+    @include tablet{
+      padding: 0px;
+    }
   }
 }
