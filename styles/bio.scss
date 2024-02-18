@@ -6,17 +6,32 @@
   background-color: $primary-dark;
   @include tablet{
     display: flex;
-    align-items: center;
     gap: 10vw;
     padding: 24px 24px 24px 24px;
+  }
+  @include desktop{
+    align-items: center;
+    height: 13vh;
+    gap: 6vw;
   }
   &__logo-wrapper{
     display: flex;
     justify-content: center;
-    background-color: $primary-dark;
-    padding: 24px 0px 16px 0px;
+    padding: 2.4vh 0px 16px 0px;
     @include tablet{
+      margin-left: 2vw;
       padding: 0px;
+    }
+    @include desktop{
+      padding-left: 130px;
+      height: 40%;
+    }
+  }
+
+  &__logo{
+    width: 140px;
+    @include desktop{
+      width: 180px;
     }
   }
   
@@ -24,41 +39,60 @@
     display: flex;
     text-align: center;
     list-style: none;
-    background-color: $primary-dark;
     margin: 0px;
     padding: 0px;
+    font-size: $section-sheader-size-phone;
+    line-height: $section-sheader-height-phone;
     @include tablet {
-      height: 19px;
       gap: 6vw;
+    }
+    @include desktop{
+      gap: 3vw;
     }
   }
   &__item-wrapper{
     display: flex;
     justify-content: center;
     width: 50%;
-    height: 32px;
+    padding: 1vh 0px 1vh 0px;
     @include tablet{
-      height: 0px;
+      
+    }
+    @include desktop{
+      font-size: $section-sheader-size-tablet;
+      line-height: $section-sheader-height-tablet;
     }
     &--active{
-      border-bottom: 3px solid $primary-light;
+      color: $primary-light;
+      font-weight: 700;
+      border-bottom: 4px solid $primary-light;
       @include tablet{
         border: none;
         color: $primary-light;
         font-weight: 700;
         text-decoration: underline;
         text-decoration-thickness: 3px;
-        text-underline-offset: 150%;
+        text-underline-offset: 235%;
       }
+      @include desktop{
+        text-decoration-thickness: 4px;
+        text-underline-offset: 205%;
+        
+      }
+      
     }
     &:hover{
-      border-bottom: 3px solid $primary-light;
+      border-bottom: 4px solid $primary-light;
       @include tablet {
         border: none;
         color: $primary-light;
         text-decoration: underline;
         text-decoration-thickness: 3px;
-        text-underline-offset: 150%;
+        text-underline-offset: 235%;
+      }
+      @include desktop{
+        text-decoration-thickness: 4px;
+        text-underline-offset: 205%;
       }
     }
       
@@ -81,22 +115,38 @@
 }
 
 .hero-section{
+  position: relative;
   background-image: url(../assets/images/hero-bio.jpg); 
-  background-position: center;
+  background-position: 50% 46%;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 200px;
+  height: 34.5vh;
   @include tablet{
-    height: 500px;
+    height: 88vh;
+  }
+  @include desktop{
+    height: 120vh;
+    background-position: 50% 0%;
   }
     &__header{
-      padding-left: 16px;
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      padding-left: 4vw;
+      font-size: $section-header-size-phone;
+      line-height: $section-header-height-phone;
+      color: $primary-light;
       font-weight: 700;
       @include tablet{
-        padding-left: 24px;
+        margin-top: -34px;
+        padding-left: 5vw;
         font-size: $section-pageh-size-tablet;
         line-height: $section-pageh-height-tablet;
+      }
+      @include desktop{
+        padding-left: 11vw;
+        font-size: 6rem;
       }
     }
     &__overlay{
@@ -113,29 +163,63 @@
 }
 
 .about-section{
-  padding: 24px 16px 16px 16px;
+  padding: 5vh 16px 16px 4vw;
   @include tablet{
     padding: 60px 50px 30px 50px;
+  }
+  @include desktop{
+    padding: 10vh 11vw 30px 11vw;
   }
 
   &__header{
     color: $primary-dark;
-    font-size: $section-header-size-phone;
-    line-height: $section-header-height-phone;
+    font-size: $section-sheader-size-tablet;
+    line-height: $section-sheader-height-tablet;
     font-weight: 700;
     padding: 0px;
-    padding-bottom: 16px;
+    padding-bottom: 2vh;
     margin: 0px;
     @include tablet{
       font-size: $section-header-size-tablet;
       line-height: $section-header-height-tablet;
       padding-bottom: 30px;
     }
+    @include desktop{
+      font-size: $section-header-size-tablet;
+      font-size: $section-header-height-tablet;
+      padding-bottom: 6vh;
+    }
+  }
+  &__img-wrapper{
+    height: 28.1vh;
+    background-image: url(../assets/images/band.jpg);
+    background-position: center;
+    background-size: cover;
+    @include tablet{
+      height: 60vh;
+      width: 75vw;
+      background-image: url(../assets/images/band.jpg);
+      background-position: center;
+      background-size: cover;
+      margin: auto;
+    }
+    @include desktop{
+      height: 75vh;
+      width: 65vw;
+      background-image: url(../assets/images/band.jpg);
+      background-position: center;
+      background-size: cover;
+      margin: auto;
+    }
   }
   &__img{
     width: 100%;
     @include tablet{
+      display: none;
       padding: 0px 40px 24px 40px;
+    }
+    @include desktop{
+      display: none;
     }
   }
   &__p{
@@ -149,21 +233,52 @@
       font-weight: 600;
     }
     @include tablet{
-      padding: 0px 40px 12px 40px;
-      font-size: $section-body-size-tablet;
+      padding: 5vh 7vw 12px 7vw;
+      font-size: $section-sheader-size-tablet;
+      line-height: $section-sheader-height-tablet;
+    }
+    @include desktop{
+      width: 53vw;
+      margin: 40px 0px 0px 6vw;
+      padding: 0px;
+      font-size: $section-header-size-tablet;
+      line-height: $section-header-height-tablet;
+    }
+  }
+  &__author{
+    color: $primary-dark;
+    margin: 0px;
+    padding: 2vh 0px 1vh 0px;
+    @include tablet{
+      padding: 0.8vh 7vw 12px 7vw;
+      font-size: 1.2rem;
       line-height: $section-body-height-tablet;
+    }
+    @include desktop{
+      width: 65vw;
+      margin: 5px 0px 6vh 6vw;
+      padding: 0px;
+      font-size: $section-sheader-size-tablet;
+      line-height: $section-sheader-height-tablet;
     }
   }
   &__sub-header{
-    font-size: $section-sheader-size-phone;
-    line-height: $section-sheader-height-phone;
     font-weight: 600;
     margin: 0px;
     padding-top: 24px;
+    font-size: $section-sheader-size-phone;
+    line-height: $section-sheader-height-phone;
     @include tablet{
-      padding: 24px 40px 22px 40px;
+      margin: 3vh auto 0.3vh 7vw;
       font-size: $section-sheader-size-tablet;
       line-height: $section-sheader-height-tablet;
+    }
+    @include desktop{
+      width: 65vw;
+      margin: 5px 0px 1vh 6vw;
+      padding: 0px;
+      font-size: $section-header-size-tablet;
+      line-height: $section-header-height-tablet;
     }
   }
   &__article{
@@ -173,20 +288,32 @@
       align-items: center;
       justify-content: center;
       gap: 4vw;
-      padding: 0px 75px 16px 75px;
+      padding: 0px;
+      margin: 0px 11vw 0.3vh 11vw;
+    }
+    @include desktop{
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 65vw;
+      margin: 0px auto 6vh 17vw;
+      padding: 0px;
     }
   }
   &__article-p{
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 16px;
     font-size: $section-body-size-phone;
-  line-height: $section-body-height-phone;
-  font-weight: 400;
-  color: $primary-dark;
-  margin: 0px;
-  padding-top: 0px;
-  padding-bottom: 16px;
-  @include tablet{
-    width: 45%;
-  }
+    line-height: $section-body-height-phone;
+    font-weight: 400;
+    color: $primary-dark;
+    @include tablet{
+      width: 45%;
+    }
+    @include desktop{
+      font-size: $section-sheader-size-tablet;
+      line-height: $section-sheader-height-tablet;
+    }
   }
 }
 
@@ -208,20 +335,35 @@
       line-height: $section-header-height-tablet;
       padding: 45px 15px 30px 15px;
     }
+    @include desktop{
+      font-size: $section-header-size-tablet;
+      font-size: $section-header-height-tablet;
+      font-size: 3rem;
+      padding: 8vh 0vw 6vh 9vw;
+    }
   }
   &__content-wrapper{
     @include tablet{
-      // display: flex;
-      // justify-content: center;
+      
+    }
+    @include desktop{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0vh 7vw 4vh 7vw;
     }
   }
   &__img{
     width: 100%;
-    padding-bottom: 16px;
+    padding-bottom: 2vh;
     @include tablet{
-      // flex: 1;
       width: 32%;
       padding: 0px 0px 25px 15px;
+    }
+    @include desktop{
+      width: 31%;
+      padding: 0px;
+      margin: 0vh 1vw 2vh 0vw;
     }
   }
 }
@@ -230,28 +372,37 @@
   background-color: $primary-dark;
   padding: 0px 16px 0px 16px;
   @include tablet{
-    position: relative;
-    padding: 50px 50px 40px 50px;
-    // display: flex;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    padding: 7vh 7vw 7vh 7vw;
   }
   &__content-wrapper{
-    @include tablet{
-      display: flex;
-      align-items: center;
-      gap: 4vw;
-    }
-    &--info{
-      flex-direction: column;
-      width: 30%;
-      align-items: flex-start;
-      justify-content: space-around;
-    }
+      @include tablet{
+        display: flex;
+        align-items: center;
+        order: -1;
+        gap: 4vw;
+      }
+      &--info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 30%;
+        
+      }
   }
   &__content-align{
     @include tablet{
       display: flex;
       justify-content: space-between;
-      padding-bottom: 30px;
+      order: 1;
+      width: 100%;
+      padding-bottom: 7vh;
+    }
+    @include desktop{
+      justify-content: flex-start;
     }
   }
   &__header-wrapper{
@@ -268,6 +419,10 @@
       line-height: $section-header-height-tablet;
       padding: 0px;
     }
+    @include desktop{
+      font-size: 3.5rem;
+      padding-top: 4vh;
+    }
   }
   &__icon-wrapper{
     display: flex;
@@ -277,11 +432,18 @@
       gap: 5vw;
       height: 44px;
     }
+    @include desktop{
+      gap: 2vw;
+      padding-top: 4vh;
+    } 
   }
   &__social-icon{
     width: 30px;
+    @include desktop{
+      width: 38px;
+    }
     &--facebook{
-      width: 18px;
+      width: 22px;
     }
     
   }
@@ -295,6 +457,11 @@
     @include tablet{
       padding-bottom: 0px;
     }
+    @include desktop{
+      font-size: $section-sheader-size-tablet;
+      line-height: $section-sheader-height-tablet;
+      padding-top: 7vh;
+    }
   }
   &__text{
     color: $primary-light;
@@ -306,6 +473,10 @@
     @include tablet{
       padding: 0px;
     }
+    @include desktop{
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
     
   }
   &__link{
@@ -314,17 +485,24 @@
     font-size: $section-footer-size-phone;
     line-height: $section-footer-height-phone;
     font-weight: 400;
+    @include desktop{
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
   }
   &__logo-wrapper{
     padding: 40px 0px 16px 0px;
     @include tablet {
-      position: absolute;
-      top: 20px;
-      right: 30px;
+      padding: 0px;
+      padding-top: 2vh;
+      order: 0;
+    }
+    @include desktop{
+      padding-top: 4vh;
     }
   }
   &__logo{
-    display: block;
+    width: 180px;
   }
   &__copyright{
     color: $primary-light;
@@ -335,6 +513,11 @@
     padding-bottom: 16px;
     @include tablet{
       padding: 0px;
+      order: 2;
+    }
+    @include desktop{
+      font-size: 1.3rem;
+      line-height: 2rem;
     }
   }
 }
