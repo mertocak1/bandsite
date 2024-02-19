@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 @font-face {
   font-family: "primary-font";
@@ -27,8 +28,14 @@
 
 body{
   font-family: "primary-font";
-  margin: 0px;
+  margin: 16vh 0px 0px 0px;
   padding: 0px;
+  @include tablet{
+    margin-top: 14vh;
+  }
+  @include desktop{
+    margin-top: 13vh;
+  }
 } 
 
 
