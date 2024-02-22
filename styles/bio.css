@@ -18,7 +18,7 @@
 }
 body {
   font-family: "primary-font";
-  margin: 16vh 0px 0px 0px;
+  margin: 1vh 0px 0px 0px;
   padding: 0px;
 }
 @media screen and (min-width: 768px) {
@@ -469,6 +469,130 @@ body {
     padding: 0px;
     margin: 0vh 1vw 2vh 0vw;
   }
+}
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+}
+.conversation__header {
+  margin: 24px 0px 16px 0px;
+  color: #323232;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.conversation__content-wrapper {
+  display: flex;
+}
+.conversation__icon-collumn {
+  display: flex;
+  justify-content: center;
+}
+.conversation__avatar-icon {
+  width: 36px;
+  height: 36px;
+  margin-top: 40px;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-position: 15% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.conversation__content {
+  width: 100%;
+  padding: 16px;
+}
+.conversation__input-tag {
+  margin: 0px;
+  margin-bottom: 5px;
+  color: #AFAFAF;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+.conversation__input-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  background-color: #FAFAFA;
+  border: 1px solid #E1E1E1;
+  border-radius: 5px;
+  resize: vertical;
+  font-family: "primary-font";
+}
+.conversation__input-box--active {
+  border-color: #323232;
+}
+.conversation__input-box--filled {
+  border-color: #E1E1E1;
+}
+.conversation__input-box--error {
+  border-color: #D22D2D;
+}
+.conversation__input-box::-moz-placeholder {
+  color: #323232;
+  font-family: "primary-font";
+}
+.conversation__input-box::placeholder {
+  color: #323232;
+  font-family: "primary-font";
+}
+.conversation__button-wrapper {
+  width: 100%;
+}
+.conversation__button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background-color: #323232;
+  font-weight: 700;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+.conversation__collumn-splitter {
+  width: 100%;
+  margin-bottom: 1vh;
+  border: 1px solid #E1E1E1;
+}
+.conversation__comment-wrapper {
+  display: flex;
+}
+.conversation__comment-avatar {
+  width: 36px;
+  height: 36px;
+  margin-top: 15px;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  background-position: 15% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.conversation__name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.conversation__comment-name {
+  margin: 0px;
+  color: #323232;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.conversation__comment-date {
+  margin: 0px;
+  color: #AFAFAF;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+.conversation__comment-text {
+  margin: 0px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .footer-section {

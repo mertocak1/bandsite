@@ -372,6 +372,139 @@
   }
 }
 
+.conversation{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+
+  &__header{
+    margin: 24px 0px 16px 0px;
+    color: $primary-dark;
+    font-size: $section-header-size-phone;
+    line-height: $section-header-height-phone;
+  }
+
+  &__content-wrapper{
+    display: flex;
+  }
+
+  &__icon-collumn{
+    display: flex;
+    // width: 30%;
+    justify-content: center;
+  }
+  &__avatar-icon{
+    width: 36px;
+    height: 36px;
+    margin-top: 40px;
+    border-radius: 50%;
+    background-color: $secondary-medium;
+    background-image: url(../assets/images/Mohan-muruge.jpg);
+    background-position: 15% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__content{
+    width: 100%;
+    // max-width: max-content;
+    padding: 16px;
+  }
+  &__input-tag{
+    margin: 0px;
+    margin-bottom: 5px;
+    color: $primary-medium;
+    font-size: $section-body-size-phone;
+    line-height: $section-body-height-phone;
+  }
+  &__input-box{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    background-color: $secondary-light;
+    border: 1px solid $secondary-medium;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: "primary-font";
+    &--active {
+      border-color: $primary-dark;
+    }
+    
+    &--filled {
+      border-color: $secondary-medium;
+    }
+    
+    &--error {
+      border-color: #D22D2D;
+    }
+  }
+  &__input-box::placeholder{
+    color: $primary-dark;
+    font-family: "primary-font";
+  }
+
+
+  &__button-wrapper{
+    width: 100%;
+  }
+  &__button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: $primary-light;
+    background-color: $primary-dark;
+    font-weight: 700;
+    font-size: $section-body-size-phone;
+    line-height: $section-body-height-phone;
+  }
+  &__collumn-splitter{
+    width: 100%;
+    margin-bottom: 1vh;
+    border: 1px solid $secondary-medium;
+  }
+
+  &__comment-wrapper{
+    display: flex;
+  }
+
+  &__comment-avatar{
+    width: 36px;
+    height: 36px;
+    margin-top: 15px;
+    border-radius: 50%;
+    background-color: $secondary-medium;
+    background-position: 15% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__name-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__comment-name{
+    margin: 0px;
+    color: $primary-dark;
+    font-weight: 600;
+    font-size: $section-sheader-size-phone;
+    line-height: $section-sheader-height-phone;
+  }
+  &__comment-date{
+    margin: 0px;
+    color: $primary-medium;
+    font-size: $section-sheader-size-phone;
+    line-height: $section-sheader-height-phone;
+  }
+  &__comment-text{
+    margin: 0px;
+    font-size: $section-sheader-size-phone;
+    line-height: $section-sheader-height-phone;
+  }
+}
+
 .footer-section{
   background-color: $primary-dark;
   padding: 0px 16px 0px 16px;
