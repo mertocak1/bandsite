@@ -1,0 +1,123 @@
+@use "partials/variables" as *;
+@use "partials/global" as *;
+@use "partials/mixins" as *;
+
+.hero-section {
+  position: relative;
+  background-image: url(../assets/images/hero-shows.jpg);
+  background-position: 15% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  margin-top: 0px;
+  @include tablet {
+    height: 88vh;
+  }
+  @include desktop {
+    height: 120vh;
+    background-position: 50% 0%;
+  }
+
+  &__p {
+    position: absolute;
+    top: 11%;
+    padding: 0px 24px;
+    margin: 0px;
+    font-size: 1.5rem;
+    color: $primary-light;
+  }
+  &__header {
+    position: absolute;
+    top: 23%;
+    padding: 0px 24px;
+    margin: 0px;
+    font-weight: 700;
+    color: $primary-light;
+    font-size: 2.3rem;
+    line-height: 4rem;
+    @include tablet {
+      margin-top: -34px;
+      padding-left: 5vw;
+      font-size: $section-pageh-size-tablet;
+      line-height: $section-pageh-height-tablet;
+    }
+    @include desktop {
+      padding-left: 11vw;
+      font-size: 6rem;
+    }
+  }
+  &__overlay {
+    display: flex;
+    align-items: center;
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-dark;
+    color: $primary-light;
+    font-size: $section-header-size-phone;
+    line-height: $section-header-height-phone;
+  }
+  &__iframe-wrapper {
+    position: absolute;
+    bottom: 40px;
+    left: 24px;
+    right: 24px;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+.ticket-section{
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0px 0px 0px;
+
+  &__title{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 30px;
+    margin-left: 24px;
+  }
+  
+  &__main-wrapper{
+    padding: 0px 24px;
+  }
+  
+  &__content-wrapper{}
+  
+  &__content-title{
+    margin: 0px;
+    color: $primary-medium;
+  }
+  
+  &__content-p{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    &--semi{
+      color: $primary-dark;
+      font-weight: 600;
+    }
+  }
+  
+  &__button{
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: $primary-light;
+    background-color: $primary-dark;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  &__section-splitter{
+    border: 1px solid $primary-medium;
+    width: 100%;
+    margin: 24px 0px ;
+  }
+}
+
+
+
