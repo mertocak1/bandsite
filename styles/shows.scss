@@ -9,13 +9,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   margin-top: 0px;
   @include tablet {
-    height: 88vh;
+    height: 100vh;
   }
   @include desktop {
-    height: 120vh;
+    height: 100vh;
     background-position: 50% 0%;
   }
 
@@ -26,6 +26,15 @@
     margin: 0px;
     font-size: 1.5rem;
     color: $primary-light;
+    @include tablet{
+      left: 5%;
+      top: 14%;
+      padding: 0px;
+    }
+    @include desktop{
+      top: 41%;
+      left: 10%;
+    }
   }
   &__header {
     position: absolute;
@@ -37,14 +46,19 @@
     font-size: 2.3rem;
     line-height: 4rem;
     @include tablet {
+      top: 31%;
       margin-top: -34px;
       padding-left: 5vw;
       font-size: $section-pageh-size-tablet;
       line-height: $section-pageh-height-tablet;
     }
     @include desktop {
-      padding-left: 11vw;
-      font-size: 6rem;
+      top: 50%;
+      left: 5%;
+      font-size: 4rem;
+      line-height: 4.25rem;
+      width: 46.5vw;
+      
     }
   }
   &__overlay {
@@ -63,6 +77,16 @@
     bottom: 40px;
     left: 24px;
     right: 24px;
+    @include tablet{
+      left: 5%;
+      right: 41%;
+      bottom: 12%;
+    }
+    @include desktop{
+     right: 10%;
+     top: 42%;
+     left: 55%;
+    }
   }
   iframe {
     width: 100%;
@@ -73,29 +97,108 @@
   display: flex;
   flex-direction: column;
   padding: 24px 0px 0px 0px;
+  @include tablet{
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  @include desktop{
+    padding: 7vh 5vw 4vh 4vw;
+  }
+
+  &__title-wrapper{
+    @include desktop{
+      display: flex;
+      justify-content: center;
+      gap: 13vw;
+      margin-right: 21vw;
+    }
+  }
 
   &__title{
+    color: $primary-dark;
     font-size: 2rem;
     line-height: 2.5rem;
     margin-bottom: 30px;
     margin-left: 24px;
+    @include desktop{
+      font-size: $section-header-size-tablet;
+      line-height: $section-header-height-tablet;
+      margin-left: 3vw;
+    }
+  }
+
+  &__tablet-title{
+    display: none;
+    @include tablet{
+      display: flex;
+      margin-left: 24px;
+      gap: 19.4vw;
+    }
+    @include desktop{
+      gap: 30vh;
+      align-items: center;
+      margin: 0px;
+    }
+    h5 {
+      display: none;
+      @include tablet{
+        display: block;
+        color: $primary-medium;
+      }
+      @include desktop{
+        font-size: 1.1rem;
+        line-height: $section-body-height-tablet;
+      }
+    }
   }
   
   &__main-wrapper{
     padding: 0px 24px;
+    @include tablet{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include desktop{
+      align-self: end;
+      width: 70%;
+      margin-right: 5%;
+    }
   }
   
-  &__content-wrapper{}
+  &__content-wrapper{
+
+    @include tablet{
+      display: flex;
+      width: 25vw;
+      height: 4vh;
+    }
+    @include desktop{
+      justify-content: center;
+    }
+  }
   
   &__content-title{
     margin: 0px;
     color: $primary-medium;
+    @include tablet{
+      display: none;
+    }
+    &--none{
+      @include tablet {
+        display: none;
+      }
+    }
   }
   
   &__content-p{
     margin-top: 10px;
     font-size: 1.2rem;
     margin-bottom: 24px;
+    @include tablet{
+      margin: 0px;
+      padding: 0px;
+    }
     &--semi{
       color: $primary-dark;
       font-weight: 600;
@@ -109,14 +212,29 @@
     background-color: $primary-dark;
     width: 100%;
     border-radius: 10px;
+    border: none;
     padding: 20px;
+    @include tablet{
+      width: 20vw;
+      padding: 15px 0px;
+      border-radius: 5px;
+    }
+    @include desktop{
+      font-weight: 400;
+    }
   }
 
   &__section-splitter{
-    border: 1px solid $primary-medium;
+    border: 1px solid $secondary-medium;
     width: 100%;
     margin: 24px 0px ;
+    @include desktop{
+      align-self: end;
+      width: 70%;
+      margin-right: 5%;
+    }
   }
+  
 }
 
 

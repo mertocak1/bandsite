@@ -48,12 +48,8 @@ function dataDisplayer(event) {
 
   // Gets value using name attribute
   const name = event.target.nameinput.value;
-  const date = new Date();
-  const formattedDate = date.toLocaleDateString('en-US', {
-    month: '2-digit',
-    day: '2-digit',
-    year: 'numeric'
-  });
+  const curDate = new Date();
+  const formattedDate = curDate.toLocaleDateString('en-US');
   const comment = event.target.commentinput.value;
 
   // Submit Data

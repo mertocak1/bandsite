@@ -66,6 +66,28 @@ function displayTicket(arrayData) {
   
   // Get Section
   const ticketSection = document.getElementById("ticketSection");
+  const titleWrapper = document.getElementById("titleWrapper");
+
+  
+
+ 
+  // Create ticket titles (Just for tablet and desktop view!!!!)
+    const tabletTitleDiv = document.createElement("div");
+    tabletTitleDiv.classList.add("ticket-section__tablet-title");
+    titleWrapper.append(tabletTitleDiv);
+
+    const tabletTitle1 = document.createElement("h5");
+    tabletTitle1.innerText = "DATE"
+    tabletTitleDiv.append(tabletTitle1);
+
+    const tabletTitle2 = document.createElement("h5");
+    tabletTitle2.innerText = "VENUE"
+    tabletTitleDiv.append(tabletTitle2);
+
+    const tabletTitle3 = document.createElement("h5");
+    tabletTitle3.innerText = "LOCATION"
+    tabletTitleDiv.append(tabletTitle3);
+  ///////////////////////////////////////////////////////////////////
 
   // Loop For Each array element
   arrayData.forEach(element => {
@@ -83,7 +105,7 @@ function displayTicket(arrayData) {
     // Create title for ticket content (Date)
     const contentTitle1 = document.createElement("h5");
     contentTitle1.classList.add("ticket-section__content-title");
-    contentTitle1.innerText = "Date"
+    contentTitle1.innerText = "DATE"
     contentWrapper1.append(contentTitle1);
 
     const contentP1 = document.createElement("p");
@@ -115,7 +137,7 @@ function displayTicket(arrayData) {
     // Create title for ticket content (Location)
     const contentTitle3 = document.createElement("h5");
     contentTitle3.classList.add("ticket-section__content-title");
-    contentTitle3.innerText = "Location"
+    contentTitle3.innerText = "LOCATION"
     contentWrapper3.append(contentTitle3);
 
     const contentP3 = document.createElement("p");

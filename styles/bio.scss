@@ -264,17 +264,37 @@
 .conversation{
   display: flex;
   flex-direction: column;
-  padding: 0px 16px;
+  padding: 0px 3vw 3vh 3vw;
+  @include tablet {
+    padding-bottom: 5vh;
+  }
 
   &__header{
-    margin: 24px 0px 16px 0px;
+    margin: 4vh 0px 3vh 0px;
     color: $primary-dark;
     font-size: $section-header-size-phone;
     line-height: $section-header-height-phone;
+    @include tablet{
+      margin: 10vh 0vw 3vh 5vw;
+      font-size: $section-header-size-tablet;
+      line-height: $section-header-height-tablet;
+    }
+    @include desktop{
+      margin-left: 8vw;
+      font-size: 3rem;
+    }
   }
 
   &__content-wrapper{
     display: flex;
+    @include tablet{
+      padding: 0px 14vw;
+    }
+    @include desktop{
+      width: 40vw;
+      padding: 0px;
+      margin: auto;
+    }
   }
 
   &__icon-collumn{
@@ -292,6 +312,10 @@
     background-position: 15% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+    @include tablet {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   &__content{
@@ -315,6 +339,13 @@
     border-radius: 5px;
     resize: vertical;
     font-family: "primary-font";
+    @include tablet {
+      padding: 3vh;
+      font-size: $section-body-size-tablet;
+    }
+    @include desktop{
+      font-size: 1.1rem;
+    }
     &--active {
       border-color: $primary-dark;
     }
@@ -335,6 +366,10 @@
 
   &__button-wrapper{
     width: 100%;
+    @include tablet{
+      display: flex;
+      justify-content: flex-end;
+    }
   }
   &__button{
     width: 100%;
@@ -346,15 +381,40 @@
     font-weight: 700;
     font-size: $section-body-size-phone;
     line-height: $section-body-height-phone;
+    @include tablet{
+      width: 20vw;
+      padding: 2vh;
+    }
+    @include desktop{
+      width: 12vw;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
   }
   &__collumn-splitter{
     width: 100%;
     margin-bottom: 1vh;
     border: 1px solid $secondary-medium;
+    @include tablet{
+      margin: auto;
+      margin-bottom: 2vh;
+      width: 70vw;
+    }
+    @include desktop{
+      width: 40vw;
+    }
   }
 
   &__comment-wrapper{
     display: flex;
+    @include tablet{
+      padding: 0px 14vw;
+    }
+    @include tablet{
+      width: 40vw;
+      padding: 0px;
+      margin: auto;
+    }
   }
 
   &__comment-avatar{
@@ -366,6 +426,10 @@
     background-position: 15% 50%;
     background-size: cover;
     background-repeat: no-repeat;
+    @include tablet{
+      width: 48px;
+      height: 48px;
+    }
   }
 
   &__name-wrapper{
