@@ -537,7 +537,7 @@ body {
   }
 }
 .ticket-section__main-wrapper {
-  padding: 0px 24px;
+  padding: 24px 24px;
 }
 @media screen and (min-width: 768px) {
   .ticket-section__main-wrapper {
@@ -552,6 +552,16 @@ body {
     width: 70%;
     margin-right: 5%;
   }
+}
+.ticket-section__main-wrapper--hover {
+  cursor: pointer;
+  background-color: #E1E1E1;
+}
+.ticket-section__main-wrapper--active {
+  background-color: #AFAFAF;
+}
+.ticket-section__main-wrapper--active {
+  background-color: #AFAFAF;
 }
 @media screen and (min-width: 768px) {
   .ticket-section__content-wrapper {
@@ -616,10 +626,12 @@ body {
     font-weight: 400;
   }
 }
+.ticket-section__button:hover {
+  cursor: pointer;
+}
 .ticket-section__section-splitter {
   border: 1px solid #E1E1E1;
   width: 100%;
-  margin: 24px 0px;
 }
 @media screen and (min-width: 1280px) {
   .ticket-section__section-splitter {

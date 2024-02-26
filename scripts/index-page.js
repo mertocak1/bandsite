@@ -60,28 +60,30 @@ function dataDisplayer(event) {
   };
 
   // Checks the the input if it is empty add error modifier
-  if (name.length === 0 || comment.length === 0) {
+  if (name.length === 0 || comment.length === 0) { // Cheks if either of them empty
     
-    if (name.length === 0 && comment.length === 0){
+    if (name.length === 0 && comment.length === 0){ // Cheks if both empty
       nameInputBox.classList.add("conversation__input-box--error");
       nameInputBox.removeAttribute('placeholder');
       commentInputBox.classList.add("conversation__input-box--error");
       commentInputBox.removeAttribute('placeholder');
       return;
-    } else if (name.length === 0 ) {
+    } else if (name.length === 0 ) { // cheks if first input box empty
       nameInputBox.classList.add("conversation__input-box--error");
       commentInputBox.classList.remove("conversation__input-box--error");
       nameInputBox.removeAttribute('placeholder');
       return;
-    } else if (comment.length === 0) {
+    } else if (comment.length === 0) { // cheks if second one is empty
       nameInputBox.classList.remove("conversation__input-box--error");
       commentInputBox.classList.add("conversation__input-box--error");
       commentInputBox.removeAttribute('placeholder');
       return;
     }
-  }else{
+  }else{ // Removes the error classes if there is no error
     nameInputBox.classList.remove("conversation__input-box--error");
     commentInputBox.classList.remove("conversation__input-box--error");
+    nameInputBox.placeholder = "Enter Your Name";
+    commentInputBox.placeholder = "Add a new comment";
   }    
 
   // If there is no error. Push the new data to commentData object.

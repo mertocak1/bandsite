@@ -1,19 +1,3 @@
-{/* <div class="ticket-section__main-wrapper">
-        <div class="ticket-section__content-wrapper">
-          <h5 class="ticket-section__content-title">DATE</h5>
-          <p class="ticket-section__content-p ticket-section__content-p--semi">Mon Sept 09 2024</p>
-        </div>
-        <div class="ticket-section__content-wrapper">
-          <h5 class="ticket-section__content-title">VENUE</h5>
-          <p class="ticket-section__content-p">Ronald Lane</p>
-        </div>
-        <div class="ticket-section__content-wrapper">
-          <h6 class="ticket-section__content-title">LOCATION</h6>
-          <p class="ticket-section__content-p">San Francisco, CA</p>
-        </div>
-        <button class="ticket-section__button">BUY TICKETS</button>
-      </div>
-      <div class="ticket-section__section-splitter"></div> */}
 
 const ticketData = [
   {
@@ -96,6 +80,24 @@ function displayTicket(arrayData) {
     const mainWrapper = document.createElement("div");
     mainWrapper.classList.add("ticket-section__main-wrapper");
     ticketSection.append(mainWrapper);
+    // adds attribute to make the div focusable
+    mainWrapper.setAttribute("tabindex", "0");
+    // mouseenter and mouse leave adds better hover stage than css psuedo class
+    mainWrapper.addEventListener("mouseenter", () => {
+      mainWrapper.classList.add("ticket-section__main-wrapper--hover");
+    });
+    mainWrapper.addEventListener("mouseleave", () => {
+      mainWrapper.classList.remove("ticket-section__main-wrapper--hover");
+    });
+    //  this event listener adds active stage
+    mainWrapper.addEventListener("focus", () => {
+      mainWrapper.classList.add("ticket-section__main-wrapper--active");
+    });
+
+    // this event listener adds allows to disable active stage when somewhere else clicked
+    mainWrapper.addEventListener("blur", (event) => {
+      event.target.classList.remove("ticket-section__main-wrapper--active");
+    });
 
     // Create and display content wrapper
     const contentWrapper1 = document.createElement("div");
@@ -155,3 +157,4 @@ function displayTicket(arrayData) {
     ticketSection.append(sectionSplitter);
   });
 }
+
