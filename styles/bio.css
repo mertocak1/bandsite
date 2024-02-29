@@ -772,7 +772,7 @@ body {
   border-color: #E1E1E1;
 }
 .conversation__input-box--error {
-  border-color: #D22D2D;
+  border-color: #d22d2d;
 }
 .conversation__input-box::-moz-placeholder {
   color: #323232;

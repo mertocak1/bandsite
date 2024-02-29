@@ -3,84 +3,83 @@
 
 @font-face {
   font-family: "primary-font";
-  src: url('../../assets/fonts/AvenirNextLTPro-Regular.otf'),
-  url('../../assets/fonts/AvenirNextLTPro.ttf');
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf"),
+    url("../../assets/fonts/AvenirNextLTPro.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "primary-font";
-  src: url('../../assets/fonts/AvenirNextLTPro-Demi.otf'),
-  url('../../assets/fonts/AvenirNextLTProDemi.ttf');
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf"),
+    url("../../assets/fonts/AvenirNextLTProDemi.ttf");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "primary-font";
-  src: url('../../assets/fonts/AvenirNextLTPro-Bold.otf'),
-  url('../../assets/fonts/AvenirNextLTProBold.ttf');
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf"),
+    url("../../assets/fonts/AvenirNextLTProBold.ttf");
 
   font-weight: 700;
   font-style: normal;
 }
 
-body{
+body {
   font-family: "primary-font";
   margin: 16vh 0px 0px 0px;
   padding: 0px;
-  @include tablet{
+  @include tablet {
     margin-top: 14vh;
   }
-  @include desktop{
+  @include desktop {
     margin-top: 13vh;
   }
-} 
-
+}
 
 * {
   box-sizing: border-box;
 }
 
-.nav-section{
+.nav-section {
   position: fixed;
   top: 0px;
   z-index: 1000;
   width: 100%;
   background-color: $primary-dark;
-  @include tablet{
+  @include tablet {
     display: flex;
     gap: 10vw;
     padding: 24px 24px 24px 24px;
   }
-  @include desktop{
+  @include desktop {
     align-items: center;
     gap: 6vw;
     padding: 40px 24px 40px 24px;
   }
-  &__logo-wrapper{
+  &__logo-wrapper {
     display: flex;
     justify-content: center;
     padding: 2.4vh 0px 16px 0px;
-    @include tablet{
+    @include tablet {
       margin-left: 2vw;
       padding: 0px;
     }
-    @include desktop{
+    @include desktop {
       height: 40%;
       padding-left: 130px;
     }
   }
 
-  &__logo{
+  &__logo {
     width: 140px;
-    @include desktop{
+    @include desktop {
       width: 180px;
     }
   }
-  
-  &__list{
+
+  &__list {
     display: flex;
     text-align: center;
     list-style: none;
@@ -91,39 +90,37 @@ body{
     @include tablet {
       gap: 6vw;
     }
-    @include desktop{
+    @include desktop {
       gap: 3vw;
     }
   }
-  &__item-wrapper{
+  &__item-wrapper {
     display: flex;
     justify-content: center;
     width: 50%;
     padding: 1vh 0px 1vh 0px;
-    @include tablet{
-      
+    @include tablet {
     }
-    @include desktop{
+    @include desktop {
       font-size: $section-sheader-size-tablet;
       line-height: $section-sheader-height-tablet;
     }
-    &--active{
+    &--active {
       font-weight: 700;
       color: $primary-light;
       border-bottom: 4px solid $primary-light;
-      @include tablet{
+      @include tablet {
         border: none;
         text-decoration: underline;
         text-decoration-thickness: 3px;
         text-underline-offset: 235%;
       }
-      @include desktop{
+      @include desktop {
         text-decoration-thickness: 4px;
         text-underline-offset: 205%;
       }
-      
     }
-    &:hover{
+    &:hover {
       border-bottom: 4px solid $primary-light;
       @include tablet {
         border: none;
@@ -132,116 +129,110 @@ body{
         text-decoration-thickness: 3px;
         text-underline-offset: 235%;
       }
-      @include desktop{
+      @include desktop {
         text-decoration-thickness: 4px;
         text-underline-offset: 205%;
       }
     }
-      
-    
   }
-  &__list-item{
+  &__list-item {
     color: $primary-medium;
     text-decoration: none;
     width: 100%;
     font-weight: 400;
-    &--active{
+    &--active {
       color: $primary-light;
     }
-    
   }
-  &__item-link{
+  &__item-link {
     text-decoration: none;
     color: $primary-medium;
   }
 }
 
-
-.footer-section{
+.footer-section {
   background-color: $primary-dark;
   padding: 0px 16px 0px 16px;
-  @include tablet{
+  @include tablet {
     display: flex;
     justify-content: space-between;
     flex-flow: wrap;
     padding: 7vh 7vw 9vh 7vw;
   }
-  &__content-wrapper{
-      @include tablet{
-        display: flex;
-        align-items: center;
-        order: -1;
-        gap: 4vw;
-      }
-      &--info{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-around;
-        width: 30%;
-        
-      }
+  &__content-wrapper {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      order: -1;
+      gap: 4vw;
+    }
+    &--info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      width: 30%;
+    }
   }
-  &__content-align{
-    @include tablet{
+  &__content-align {
+    @include tablet {
       display: flex;
       justify-content: space-between;
       order: 1;
       width: 100%;
       padding-bottom: 7vh;
     }
-    @include desktop{
+    @include desktop {
       justify-content: flex-start;
       gap: 50px;
       margin-right: auto;
     }
   }
-  &__header-wrapper{
+  &__header-wrapper {
     display: flex;
   }
-  &__header{
+  &__header {
     color: $primary-light;
     font-size: $section-header-size-phone;
     line-height: $section-header-height-phone;
     margin: 0px;
     padding: 24px 0px 16px 0px;
-    @include tablet{
+    @include tablet {
       font-size: $section-header-size-tablet;
       line-height: $section-header-height-tablet;
       padding: 0px;
     }
-    @include desktop{
+    @include desktop {
       font-size: 3.5rem;
       padding-top: 4vh;
     }
   }
-  &__icon-wrapper{
+  &__icon-wrapper {
     display: flex;
     align-items: center;
     gap: 9vw;
-    @include tablet{
+    @include tablet {
       gap: 5vw;
       height: 44px;
     }
-    @include desktop{
+    @include desktop {
       gap: 2vw;
       padding-top: 4vh;
-    } 
+    }
   }
-  &__social-icon{
+  &__social-icon {
     width: 30px;
-    @include desktop{
+    @include desktop {
       width: 38px;
     }
-    &--facebook{
+    &--facebook {
       width: 17px;
-      @include desktop{
+      @include desktop {
         width: 22px;
       }
     }
-    
   }
-  &__subheader{
+  &__subheader {
     width: max-content;
     color: $primary-light;
     font-size: $section-sheader-size-phone;
@@ -249,71 +240,70 @@ body{
     font-weight: 600;
     margin: 0px;
     padding: 24px 0px 16px 0px;
-    @include tablet{
+    @include tablet {
       padding-bottom: 0px;
     }
-    @include desktop{
+    @include desktop {
       font-size: $section-sheader-size-tablet;
       line-height: $section-sheader-height-tablet;
       padding-top: 7vh;
     }
   }
-  &__text{
+  &__text {
     color: $primary-light;
     font-size: $section-footer-size-phone;
     line-height: $section-footer-height-phone;
     font-weight: 400;
     margin: 0px;
     padding-bottom: 16px;
-    @include tablet{
+    @include tablet {
       padding: 0px;
     }
-    @include desktop{
+    @include desktop {
       font-size: 1.3rem;
       line-height: 2rem;
     }
-    
   }
-  &__link{
+  &__link {
     text-decoration: none;
     color: $primary-light;
     font-size: $section-footer-size-phone;
     line-height: $section-footer-height-phone;
     font-weight: 400;
-    @include desktop{
+    @include desktop {
       font-size: 1.3rem;
       line-height: 2rem;
     }
   }
-  &__logo-wrapper{
+  &__logo-wrapper {
     padding: 40px 0px 16px 0px;
     @include tablet {
       padding: 0px;
       padding-top: 2vh;
       order: 0;
     }
-    @include desktop{
+    @include desktop {
       padding-top: 4vh;
     }
   }
-  &__logo{
+  &__logo {
     width: 150px;
-    @include desktop{
+    @include desktop {
       width: 180px;
     }
   }
-  &__copyright{
+  &__copyright {
     color: $primary-light;
     font-size: $section-footer-size-phone;
     line-height: $section-footer-height-phone;
     font-weight: 400;
     margin: 0px;
     padding-bottom: 16px;
-    @include tablet{
+    @include tablet {
       padding: 0px;
       order: 2;
     }
-    @include desktop{
+    @include desktop {
       font-size: 1.3rem;
       line-height: 2rem;
     }

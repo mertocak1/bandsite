@@ -135,21 +135,21 @@
     <section class="conversation">
       <h4 class="conversation__header">Join the Conversation</h4>
 
-<!-- Form -->
+      <!-- Form -->
       <form id="comment-form">
         <div class="conversation__content-wrapper">
           <div class="conversation__icon-collumn">
-<!-- Displays the comment img -->
+            <!-- Displays the comment img -->
             <div class="conversation__avatar-icon"></div>
           </div>
-<!-- In Put Wrapper -->
+          <!-- In Put Wrapper -->
           <div class="conversation__content">
             <div>
               <!-- Name input Label -->
               <label for="name-input" class="conversation__input-tag">
                 NAME
               </label>
-<!-- Name input box -->
+              <!-- Name input box -->
               <input
                 id="name-input"
                 name="nameinput"
@@ -159,11 +159,11 @@
               />
             </div>
             <div>
-<!-- Comment Input Label -->
+              <!-- Comment Input Label -->
               <label for="comment-input" class="conversation__input-tag">
                 COMMENT
               </label>
-<!-- Comment Input Box -->
+              <!-- Comment Input Box -->
               <textarea
                 id="comment-input"
                 class="conversation__input-box"
@@ -180,41 +180,8 @@
           </div>
         </div>
       </form>
-<!-- Adds Splitter (line) between comments -->
-      <!-- <div class="conversation__collumn-splitter"></div> -->
-
-<!-- Displayed Comments -->
-
-      <!-- <div class="conversation__comment-wrapper"> -->
-<!-- Profile Icon Wrapper -->
-        <!-- <div class="conversation__icon-collumn"> -->
-<!-- Wrapper Used For Display Profile Icon -->
-          <!-- <div class="conversation__comment-avatar"></div>
-        </div> -->
-<!-- Comment Content Wrapper -->
-        <!-- <div class="conversation__content"> -->
-<!-- Content Header and Date Wrapper -->
-          <!-- <div class="conversation__name-wrapper">
-            <h5 class="conversation__comment-name">Mert Ocak</h5>
-            <p class="conversation__comment-date">11/05/2023</p>
-          </div> -->
-<!-- Content Text Wrapper -->
-          <!-- <div class="conversation__comment">
-            <p class="conversation__comment-text">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
-          </div>
-        </div>
-      </div> -->
-<!-- Adds Splitter (line) between comments -->
       <div class="conversation__collumn-splitter"></div>
-      <div id="render-comment">
-
-
-
-
-
-
-      </div>
-
+      <div id="render-comment"></div>
     </section>
 
     <footer class="footer-section">
@@ -302,7 +269,13 @@
         Copyright The Bees Knees © 2023 All Rights Reserved
       </h6>
     </footer>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+      integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="scripts/band-site-api.js"></script>
     <script src="scripts/index-page.js"></script>
   </body>
 </html>

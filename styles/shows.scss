@@ -26,12 +26,12 @@
     margin: 0px;
     font-size: 1.5rem;
     color: $primary-light;
-    @include tablet{
+    @include tablet {
       left: 5%;
       top: 14%;
       padding: 0px;
     }
-    @include desktop{
+    @include desktop {
       top: 41%;
       left: 10%;
     }
@@ -58,7 +58,6 @@
       font-size: 4rem;
       line-height: 4.25rem;
       width: 46.5vw;
-      
     }
   }
   &__overlay {
@@ -77,15 +76,15 @@
     bottom: 40px;
     left: 24px;
     right: 24px;
-    @include tablet{
+    @include tablet {
       left: 5%;
       right: 41%;
       bottom: 12%;
     }
-    @include desktop{
-     right: 10%;
-     top: 42%;
-     left: 55%;
+    @include desktop {
+      right: 10%;
+      top: 42%;
+      left: 55%;
     }
   }
   iframe {
@@ -93,20 +92,20 @@
   }
 }
 
-.ticket-section{
+.ticket-section {
   display: flex;
   flex-direction: column;
   padding: 24px 0px 0px 0px;
-  @include tablet{
+  @include tablet {
     padding-left: 2vw;
     padding-right: 2vw;
   }
-  @include desktop{
+  @include desktop {
     padding: 7vh 5vw 4vh 4vw;
   }
 
-  &__title-wrapper{
-    @include desktop{
+  &__title-wrapper {
+    @include desktop {
       display: flex;
       justify-content: center;
       gap: 13vw;
@@ -114,108 +113,107 @@
     }
   }
 
-  &__title{
+  &__title {
     color: $primary-dark;
     font-size: 2rem;
     line-height: 2.5rem;
     margin-bottom: 30px;
     margin-left: 24px;
-    @include desktop{
+    @include desktop {
       font-size: $section-header-size-tablet;
       line-height: $section-header-height-tablet;
       margin-left: 3vw;
     }
   }
 
-  &__tablet-title{
+  &__tablet-title {
     display: none;
-    @include tablet{
+    @include tablet {
       display: flex;
       margin-left: 24px;
       gap: 19.4vw;
     }
-    @include desktop{
+    @include desktop {
       gap: 30vh;
       align-items: center;
       margin: 0px;
     }
     h5 {
       display: none;
-      @include tablet{
+      @include tablet {
         display: block;
         color: $primary-medium;
       }
-      @include desktop{
+      @include desktop {
         font-size: 1.1rem;
         line-height: $section-body-height-tablet;
       }
     }
   }
-  
-  &__main-wrapper{
+
+  &__main-wrapper {
     padding: 24px 24px;
-    @include tablet{
+    @include tablet {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    @include desktop{
+    @include desktop {
       align-self: end;
       width: 70%;
       margin-right: 5%;
     }
-    &--hover{
+    &--hover {
       cursor: pointer;
       background-color: $secondary-medium;
     }
-    &--active{
+    &--active {
       background-color: $primary-medium;
     }
-    &--active{
+    &--active {
       background-color: $primary-medium;
     }
   }
-  
-  &__content-wrapper{
 
-    @include tablet{
+  &__content-wrapper {
+    @include tablet {
       display: flex;
       width: 25vw;
       height: 4vh;
     }
-    @include desktop{
+    @include desktop {
       justify-content: center;
     }
   }
-  
-  &__content-title{
+
+  &__content-title {
     margin: 0px;
     color: $primary-medium;
-    @include tablet{
+    @include tablet {
       display: none;
     }
-    &--none{
+    &--none {
       @include tablet {
         display: none;
       }
     }
   }
-  
-  &__content-p{
+
+  &__content-p {
     margin-top: 10px;
     font-size: 1.2rem;
     margin-bottom: 24px;
-    @include tablet{
+    @include tablet {
       margin: 0px;
       padding: 0px;
     }
-    &--semi{
+    &--semi {
       color: $primary-dark;
       font-weight: 600;
     }
   }
-  
-  &__button{
+
+  &__button {
     font-weight: 600;
     font-size: 1.3rem;
     color: $primary-light;
@@ -224,30 +222,26 @@
     border-radius: 10px;
     border: none;
     padding: 20px;
-    @include tablet{
+    @include tablet {
       width: 20vw;
       padding: 15px 0px;
       border-radius: 5px;
     }
-    @include desktop{
+    @include desktop {
       font-weight: 400;
     }
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
 
-  &__section-splitter{
+  &__section-splitter {
     border: 1px solid $secondary-medium;
     width: 100%;
-    @include desktop{
+    @include desktop {
       align-self: end;
       width: 70%;
       margin-right: 5%;
     }
   }
-  
 }
-
-
-
