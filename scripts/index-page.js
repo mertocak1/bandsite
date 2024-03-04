@@ -20,8 +20,8 @@ function sortByTimestamp(comments) {
   return comments;
 }
 
-async function postComment(comment) {
-  const postComment = await api.postComment(comment);
+function postComment(comment) {
+  const postComment = api.postComment(comment);
   console.log(postComment);
 }
 
@@ -56,9 +56,6 @@ async function handleForm(event) {
     comment: comment,
   };
 
-  // makes post request to the api using newData (new comment data)
-  await postComment(newData);
-
   // Checks the the input if it is empty add error modifier
   if (name.length === 0 || comment.length === 0) {
     // Cheks if either of them empty
@@ -91,7 +88,7 @@ async function handleForm(event) {
   }
 
   // If there is no error. Push the new data to commentData object.
-  await postComment(newData);
+  postComment(newData);
 
   // resets the input section
   event.target.reset();
@@ -183,10 +180,5 @@ function renderComment(comments) {
     // displays the comment splitter
     renderComment.append(commentSplitter);
   });
-}
-
-function dateFormat(date) {
-  const curDate = new Date(date);
-  const formattedDate = curDate.toLocaleDateString("en-US");
-  return formattedDate;
+  getComments();
 }

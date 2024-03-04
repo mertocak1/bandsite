@@ -33,6 +33,7 @@ body {
 }
 
 * {
+  font-family: "primary-font";
   box-sizing: border-box;
 }
 

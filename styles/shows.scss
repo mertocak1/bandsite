@@ -107,9 +107,8 @@
   &__title-wrapper {
     @include desktop {
       display: flex;
-      justify-content: center;
-      gap: 13vw;
-      margin-right: 21vw;
+      justify-content: left;
+      gap: 11.5vw;
     }
   }
 
@@ -134,7 +133,7 @@
       gap: 19.4vw;
     }
     @include desktop {
-      gap: 30vh;
+      gap: 17vh;
       align-items: center;
       margin: 0px;
     }
@@ -145,6 +144,7 @@
         color: $primary-medium;
       }
       @include desktop {
+        width: 100px;
         font-size: 1.1rem;
         line-height: $section-body-height-tablet;
       }
@@ -155,13 +155,14 @@
     padding: 24px 24px;
     @include tablet {
       display: flex;
-      justify-content: space-between;
+      justify-content: left;
       align-items: center;
     }
     @include desktop {
       align-self: end;
       width: 70%;
       margin-right: 5%;
+      padding-left: 0px;
     }
     &--hover {
       cursor: pointer;
@@ -182,7 +183,7 @@
       height: 4vh;
     }
     @include desktop {
-      justify-content: center;
+      justify-content: left;
     }
   }
 

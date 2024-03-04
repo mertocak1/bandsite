@@ -1,44 +1,16 @@
-const ticketData = [
-  {
-    date: "Mon Sept 09 2024",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 17 2024",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Oct 12 2024",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Mon Sept 09 2024",
-    venue: "View Launge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 16 2024",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 29 2024",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 18 2024",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+const apiKey = "8f96edb5-13f7-429e-9b5d-ed9999b9c002";
 
-displayTicket(ticketData);
+const api = new BandSiteApi(apiKey);
 
-function displayTicket(arrayData) {
+async function getShows() {
+  const response = await api.getShowDates();
+  renderTicket(response);
+  console.log(response);
+}
+
+getShows();
+
+function renderTicket(arrayData) {
   // Get Section
   const ticketSection = document.getElementById("ticketSection");
   const titleWrapper = document.getElementById("titleWrapper");
@@ -62,7 +34,7 @@ function displayTicket(arrayData) {
   ///////////////////////////////////////////////////////////////////
 
   // Loop For Each array element
-  arrayData.forEach((element) => {
+  arrayData.forEach((obj) => {
     // Create and display main wrapper
     const mainWrapper = document.createElement("div");
     mainWrapper.classList.add("ticket-section__main-wrapper");
@@ -100,7 +72,8 @@ function displayTicket(arrayData) {
     const contentP1 = document.createElement("p");
     contentP1.classList.add("ticket-section__content-p");
     contentP1.classList.add("ticket-section__content-p--semi");
-    contentP1.innerText = element.date;
+
+    contentP1.innerText = `${convertDateToWords(obj.date)}`;
     contentWrapper1.append(contentP1);
 
     const contentWrapper2 = document.createElement("div");
@@ -115,7 +88,7 @@ function displayTicket(arrayData) {
 
     const contentP2 = document.createElement("p");
     contentP2.classList.add("ticket-section__content-p");
-    contentP2.innerText = element.venue;
+    contentP2.innerText = obj.place;
     contentWrapper2.append(contentP2);
 
     // Create and display content wrapper
@@ -131,7 +104,7 @@ function displayTicket(arrayData) {
 
     const contentP3 = document.createElement("p");
     contentP3.classList.add("ticket-section__content-p");
-    contentP3.innerText = element.location;
+    contentP3.innerText = obj.location;
     contentWrapper3.append(contentP3);
 
     const ticketButton = document.createElement("button");
